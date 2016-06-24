@@ -136,30 +136,40 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 });
 
 
-/*
-	Function to Send the Form to my firebase
- */
+(function($){
+    $.fn.extend({
+        rotaterator: function(options) {
 
-function sendForm() {
-	var name = $('#contact-name').val();
-	var email = $('#contact-email').val();
-	var message = $('#contact-message').val();
-	var dateTime = new Date();
-	var ref = new Firebase('https://akshays-website.firebaseio.com/contact');
-	ref.push({'Name': name, 'Email': email, 'Message': message, 'Date-Time': dateTime.toString()});
-	console.log(ref.toString());
-}
+            var defaults = {
+                fadeSpeed: 500,
+                pauseSpeed: 300,
+				child:null
+            };
 
+            var options = $.extend(defaults, options);
 
+            return this.each(function() {
+                  var o =options;
+                  var obj = $(this);
+                  var items = $(obj.children(), obj);
+				  items.each(function() {$(this).hide();})
+				  if(!o.child){var next = $(obj).children(':first');
+				  }else{var next = o.child;
+				  }
+				  $(next).fadeIn(o.fadeSpeed, function() {
+						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+							var next = $(this).next();
+							if (next.length == 0){
+									next = $(obj).children(':first');
+							}
+							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+						})
+					});
+            });
+        }
+    });
+})(jQuery);
 
-
- /*
- Google Analytics
-  */
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-79770649-1', 'auto');
-    ga('send', 'pageview');
+ $(document).ready(function() {
+        $('#rotate').rotaterator({fadeSpeed:500, pauseSpeed:300});
+ });
