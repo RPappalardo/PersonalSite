@@ -173,3 +173,29 @@ $('#return-to-top').click(function() {      // When arrow is clicked
  $(document).ready(function() {
         $('#rotate').rotaterator({fadeSpeed:500, pauseSpeed:300});
  });
+
+
+
+ // jQuery for page scrolling feature - requires jQuery Easing plugin
+ $(function() {
+     $('a.page-scroll').bind('click', function(event) {
+         var $anchor = $(this);
+         $('html, body').stop().animate({
+             scrollTop: $($anchor.attr('href')).offset().top
+         }, 1500, 'easeInOutExpo');
+         event.preventDefault();
+     });
+ });
+
+
+
+ $(document).ready(function(){
+     //typing effect
+     $(function(){
+         $(".subheading").typed({
+             strings: ["Programmer.^1050 Student.^1050 Researcher."],
+             typeSpeed: 15,
+             startDelay: 400
+         });
+     });
+ });
