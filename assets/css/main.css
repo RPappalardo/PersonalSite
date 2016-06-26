@@ -97,7 +97,10 @@
 	/* Extra Things */
 	body{background: #eee ;font-family: 'Open Sans', sans-serif;}h3{font-size: 30px; font-weight: 400;text-align: center;margin-top: 50px;}h3 i{color: #444;}
 
-
+	element.style {
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	}
 
 	.col-xs-12 {
 		background: none;
@@ -1537,7 +1540,7 @@ a.socialIcon:hover, .socialHoverClass {
 		}
 
 		#contactme nav {
-			margin: 1.5em 0 0 0;
+			margin: 1.0em 0 0 0;
 		}
 
 			#contactme nav li {
@@ -1929,57 +1932,6 @@ a.socialIcon:hover, .socialHoverClass {
 			border-top-color: rgba(255, 255, 255, 0.05);
 		}
 
-		#footer-wrapper form input[type="text"],
-		#footer-wrapper form input[type="email"],
-		#footer-wrapper form input[type="password"],
-		#footer-wrapper form select,
-		#footer-wrapper form textarea {
-			background: #ccc;
-			box-shadow: none;
-		}
-
-			#footer-wrapper form input[type="text"]:focus,
-			#footer-wrapper form input[type="email"]:focus,
-			#footer-wrapper form input[type="password"]:focus,
-			#footer-wrapper form select:focus,
-			#footer-wrapper form textarea:focus {
-				background: #fff;
-			}
-
-		#footer-wrapper input[type="button"],
-		#footer-wrapper input[type="submit"],
-		#footer-wrapper input[type="reset"],
-		#footer-wrapper button,
-		#footer-wrapper .button {
-			color: #fff;
-			box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.5);
-		}
-
-			#footer-wrapper input[type="button"]:hover,
-			#footer-wrapper input[type="submit"]:hover,
-			#footer-wrapper input[type="reset"]:hover,
-			#footer-wrapper button:hover,
-			#footer-wrapper .button:hover {
-				color: #fff;
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.65);
-			}
-
-			#footer-wrapper input[type="button"]:active,
-			#footer-wrapper input[type="submit"]:active,
-			#footer-wrapper input[type="reset"]:active,
-			#footer-wrapper button:active,
-			#footer-wrapper .button:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
-			}
-
-			#footer-wrapper input[type="button"].style2:active,
-			#footer-wrapper input[type="submit"].style2:active,
-			#footer-wrapper input[type="reset"].style2:active,
-			#footer-wrapper button.style2:active,
-			#footer-wrapper .button.style2:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
-			}
-
 		#footer-wrapper .title {
 			background: #282b34 url("images/overlay.png");
 			color: #eee;
@@ -2075,7 +2027,7 @@ a.socialIcon:hover, .socialHoverClass {
 			body, input, select, textarea {
 				font-size: 13pt;
 				line-height: 1.75em;
-				letter-spacing: 0.020em;
+				letter-spacing: 0.10em;
 			}
 
 			body {
@@ -2130,14 +2082,6 @@ a.socialIcon:hover, .socialHoverClass {
 				line-height: 4em;
 			}
 
-				input[type="button"].big,
-				input[type="submit"].big,
-				input[type="reset"].big,
-				button.big,
-				.button.big {
-					font-size: 0.98em;
-					min-width: 14em;
-				}
 
 		/* List */
 
@@ -2250,12 +2194,12 @@ a.socialIcon:hover, .socialHoverClass {
 			.wrapper {
 				padding: 6em 0 9em 0;
 			}
-
+/*does the little tabs*/
 				.wrapper .title {
 					font-size: 0.9em;
 					width: 25em;
-					height: 3.25em;
-					top: -3.25em;
+					height: 2.25em;
+					top: -0.7em;
 					line-height: 3.25em;
 					margin-bottom: -3.25em;
 					margin-left: -12.5em;
@@ -2318,7 +2262,7 @@ a.socialIcon:hover, .socialHoverClass {
 			#nav {
 				position: absolute;
 				display: block;
-				top: 2.5em;
+				top: 0.0em;
 				left: 0;
 				width: 100%;
 				text-align: center;
@@ -2328,13 +2272,12 @@ a.socialIcon:hover, .socialHoverClass {
 					display: inline-block;
 					border-radius: 0.35em;
 					box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-					padding: 0 1.5em 0 1.5em;
 				}
 
 					#nav > ul > li {
 						display: inline-block;
 						text-align: center;
-						padding: 0 1.5em 0 1.5em;
+						padding: 0 4.5em 0 4.5em;
 					}
 
 						#nav > ul > li > ul {
@@ -2491,7 +2434,7 @@ a.socialIcon:hover, .socialHoverClass {
 		/* Copyright */
 
 			#copyright {
-				margin: 6em 0 0 0;
+				margin: 0em 0 0 0;
 			}
 
 				#copyright ul {
